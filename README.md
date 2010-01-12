@@ -17,8 +17,7 @@ Create your Sinatra app:
     require 'sinatra/effigy'
 
     get '/jobs/:id' do |id|
-      job = mongo['jobs'].find('id' => id)
-      effigy :job, job
+      effigy :job, Job.find(id)
     end
 
 Create your template (fresh from a designer?) at /templates/job.html:
@@ -45,8 +44,8 @@ Create a view at /views/job.rb that responds to #transform:
     class JobView < Effigy::View
       attr_reader :job
 
-      def initialize(job)
-        @job = job
+      def initialize(*locals)
+        @job = locals.first
       end
 
       def transform
@@ -67,8 +66,7 @@ Assumes matching files at views/*.rb and templates/*.html.
 Use a string if you need directories:
 
     get '/jobs/edit/:id' do |id|
-      job = mongo['jobs'].find('id' => id)
-      effigy 'jobs/edit', job
+      effigy 'jobs/edit', Job.find(id)
     end
 
 Resources

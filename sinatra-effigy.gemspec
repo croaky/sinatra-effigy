@@ -9,11 +9,17 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Croak"]
-  s.date = %q{2010-01-11}
+  s.date = %q{2010-01-12}
   s.description = %q{HTML in .html files. Ruby in .rb files.}
   s.email = %q{dcroak@thoughtbot.com}
+  s.extra_rdoc_files = [
+    "LICENSE",
+     "README.md"
+  ]
   s.files = [
     ".gitignore",
+     "LICENSE",
+     "README.md",
      "Rakefile",
      "VERSION",
      "lib/sinatra/effigy.rb",
