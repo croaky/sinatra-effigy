@@ -32,10 +32,12 @@ Create your template (fresh from a designer?) at /templates/job.html:
       <h2><a href="http://example.com">thoughtbot</a></h2>
       <h3>Boston or New York</h3>
 
-      <p>Graphic design, typography, CSS, HTML.</p>
+      <div id="description">
+        <p>Graphic design, typography, CSS, HTML.</p>
+      </div>
 
       <h3>Apply</h3>
-      <p>Please contact jobs@example.com</p>
+      <p>Please contact <span id="apply-at">jobs@example.com</span>.</p>
     </body>
     </html>
 
