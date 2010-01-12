@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sinatra-effigy}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Croak"]
@@ -13,8 +13,11 @@ Gem::Specification.new do |s|
   s.description = %q{HTML in .html files. Ruby in .rb files.}
   s.email = %q{dcroak@thoughtbot.com}
   s.files = [
-    "VERSION",
-     "lib/sinatra/effigy.rb"
+    ".gitignore",
+     "Rakefile",
+     "VERSION",
+     "lib/sinatra/effigy.rb",
+     "sinatra-effigy.gemspec"
   ]
   s.homepage = %q{http://github.com/dancroak/sinatra-effigy}
   s.rdoc_options = ["--charset=UTF-8"]
