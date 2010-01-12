@@ -63,7 +63,7 @@ Create a view at /views/job.rb that responds to #transform:
 Conventions
 -----------
 
-Assumes matching files at views/*.rb and templates/*.html.
+Assumes matching Ruby files at views/ and HTML files at templates/.
 
 Use a string if you need directories:
 
