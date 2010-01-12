@@ -1,7 +1,14 @@
 Sinatra Effigy
 ==============
 
-An Effigy extension for Sinatra. HTML in .html files. Ruby in .rb files.
+An Effigy extension for Sinatra.
+
+Why?
+----
+
+* HTML should be in .html files. Ruby should be in .rb files.
+* Effigy follows the jQuery API - just replace $() with f().
+* Effigy has 100% test coverage and 0 Reek smells.
 
 Usage
 -----
