@@ -53,8 +53,8 @@ Create a view at /views/job.rb that responds to #transform:
     class JobView < Effigy::View
       attr_reader :job
 
-      def initialize(*locals)
-        @job = locals.first
+      def initialize(job)
+        @job = job
       end
 
       def transform
