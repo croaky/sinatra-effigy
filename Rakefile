@@ -9,6 +9,7 @@ Jeweler::Tasks.new do |gem|
   gem.authors     = ["Dan Croak"]
 
   gem.add_dependency("sinatra")
+  gem.add_dependency("effigy")
 end
 
 Jeweler::GemcutterTasks.new
