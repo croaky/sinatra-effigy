@@ -4,7 +4,9 @@ require 'effigy'
 module Sinatra
   module Effigy
     module Helpers
-      Dir['views/*'].each { |view| require view }
+      def initialize
+        Dir["#{self.options.views}/*"].each { |view| require view }
+      end
 
       def effigy(name, *locals)
         camel_name = "#{name}_view".
@@ -19,7 +21,7 @@ module Sinatra
 
     def self.registered(app)
       app.helpers Effigy::Helpers
-
+      
       app.set :templates, 'templates'
     end
   end
