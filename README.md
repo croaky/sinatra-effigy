@@ -24,6 +24,7 @@ Create your Sinatra app:
     require 'sinatra/effigy'
 
     set :app_file, __FILE__
+    set :templates, 'templates'
 
     get '/jobs/:id' do |id|
       effigy :job, Job.find(id)
