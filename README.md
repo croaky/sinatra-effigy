@@ -24,7 +24,6 @@ Create your Sinatra app:
     require 'sinatra/effigy'
 
     set :app_file, __FILE__
-    set :templates, 'templates'
 
     get '/jobs/:id' do |id|
       effigy :job, Job.find(id)
@@ -80,6 +79,14 @@ Use a string if you need directories:
     get '/jobs/edit/:id' do |id|
       effigy 'jobs/edit', Job.find(id)
     end
+
+Override
+--------
+
+Want to put your Ruby or HTML files elsewhere?
+
+    set :templates, 'somewhere/else'
+    set :views,     'not/views'
 
 Gotchas
 -------
