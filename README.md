@@ -100,3 +100,8 @@ Resources
 
 * [Effigy](http://github.com/jferris/effigy)
 * [Sinatra](http://sinatrarb.com)
+
+Authors
+-------
+
+Dan Croak, Danny Tatom
