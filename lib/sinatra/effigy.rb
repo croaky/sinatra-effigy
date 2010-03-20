@@ -5,13 +5,20 @@ module Sinatra
   module Effigy
     module Helpers
       def effigy(name, *locals)
-        camel_name = "#{name}_view".
-                        gsub(' ', '_').
-                        gsub(/\/(.)/)  { "::#{$1.upcase}" }.
-                        gsub(/(?:^|_)(.)/) { $1.upcase }
-        view      = Object.const_get(camel_name).new(*locals)
-        template  = File.read("#{options.templates}/#{name}.html")
-        view.render(template)
+        view_file     = "#{options.views}/#{name}.rb"
+        template_file = "#{options.templates}/#{name}.html"
+
+        if File.exists?(view_file)
+          camel_name = "#{name}_view".
+                          gsub(' ', '_').
+                          gsub(/\/(.)/)  { "::#{$1.upcase}" }.
+                          gsub(/(?:^|_)(.)/) { $1.upcase }
+          view      = Object.const_get(camel_name).new(*locals)
+          template  = File.read(template_file)
+          view.render(template)
+        else
+          File.read(template_file)
+        end
       end
     end
 

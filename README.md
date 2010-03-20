@@ -17,16 +17,24 @@ Install the gem:
 
     sudo gem install sinatra-effigy
 
-Create your Sinatra app:
+Create your classic Sinatra app:
 
     require 'rubygems'
     require 'sinatra'
     require 'sinatra/effigy'
 
-    set :app_file, __FILE__
-
     get '/jobs/:id' do |id|
       effigy :job, Job.find(id)
+    end
+
+Or, if you are using the modular style of Sinatra:
+
+    class App < Sinatra::Base
+      register Sinatra::Effigy
+
+      get '/jobs/:id' do |id|
+        effigy :job, Job.find(id)
+      end
     end
 
 Create your template (fresh from a designer?) at /templates/job.html:
