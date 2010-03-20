@@ -93,6 +93,8 @@ Override
 
 Want to put your Ruby or HTML files elsewhere?
 
+    register Sinatra::Effigy
+
     set :templates, 'somewhere/else'
     set :views,     'not/views'
 
