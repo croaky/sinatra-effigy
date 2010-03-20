@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sinatra-effigy}
-  s.version = "0.0.8"
+  s.version = "0.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Croak"]
-  s.date = %q{2010-03-11}
+  s.date = %q{2010-03-20}
   s.description = %q{Ruby in .rb files. HTML in .html files.}
   s.email = %q{dcroak@thoughtbot.com}
   s.extra_rdoc_files = [
@@ -23,13 +23,27 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/sinatra/effigy.rb",
-     "sinatra-effigy.gemspec"
+     "sinatra-effigy.gemspec",
+     "spec/custom_templates/index.html",
+     "spec/custom_templates/job.html",
+     "spec/custom_views/job.rb",
+     "spec/extension_spec.rb",
+     "spec/spec_helper.rb",
+     "spec/templates/index.html",
+     "spec/templates/job.html",
+     "spec/views/job.rb"
   ]
   s.homepage = %q{http://github.com/dancroak/sinatra-effigy}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{An Effigy extension for Sinatra.}
+  s.test_files = [
+    "spec/custom_views/job.rb",
+     "spec/extension_spec.rb",
+     "spec/spec_helper.rb",
+     "spec/views/job.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
